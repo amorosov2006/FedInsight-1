@@ -1,0 +1,19 @@
+# Keep the Docker build context small. NOTE: data/chroma is intentionally NOT
+# excluded — the prebuilt vector store must ship into the image.
+.git
+.venv
+venv
+ENV
+env
+.idea
+.vscode
+__pycache__
+*.pyc
+*.log
+.env
+.env.local
+.DS_Store
+notebooks
+# Big inputs we don't need at runtime (the Chroma DB already holds the embeddings)
+data/raw
+data/processed
