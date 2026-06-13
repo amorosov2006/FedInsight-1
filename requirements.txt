@@ -1,4 +1,10 @@
 # FedInsight - RAG over Federal Reserve Documents
+#
+# Hugging Face Spaces (CPU tier): pull the CPU-only torch build instead of the
+# default CUDA wheel. Keeps the image small and avoids build-size/time limits.
+# Harmless locally — pip falls back to PyPI for everything else.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 # Core
 requests>=2.31.0
 beautifulsoup4>=4.12.0

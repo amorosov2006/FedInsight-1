@@ -27,9 +27,12 @@ venv/
 ENV/
 env/
 
-# Data (raw PDFs are big)
-data/
-#vectorstore/
+# Data: ignore raw PDFs (big) and processed logs/metadata...
+data/raw/
+data/processed/
+# ...but DO ship the prebuilt Chroma vector store (committed via Git LFS) so the
+# Hugging Face Space has a knowledge base on first boot.
+# (data/chroma/ is intentionally NOT ignored.)
 
 # IDE
 .idea/
